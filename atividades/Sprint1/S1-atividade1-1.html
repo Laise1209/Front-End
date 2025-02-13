@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Insira o sabor da pizza:</p> <br>
+    <input type="text" id="sabor">
+
+    <p>Insira o preço da pizza:</p> <br>
+    <input type="text" id="preco">
+
+    <p>Insira a quantidade de amigos que irão comer:</p> <br>
+    <input type="text" id="qtdAmigos"> <br> <br>
+
+    <button onclick="gerarValor()">Ver valor por amigo</button> <br>
+
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+
+    function gerarValor(){
+        var idSabor = sabor.value;
+        var idPreco = Number(preco.value);
+        var idQtdAmigos = Number(qtdAmigos.value);
+
+        var caixinha = idPreco * 0.1;
+        var valorPorAmigo = (idPreco + caixinha) / idQtdAmigos;
+
+        msg.innerHTML = ` Cada amigo vai colaborar com R$${valorPorAmigo}para a pizza de ${idSabor}`; 
+    }
+
+</script>

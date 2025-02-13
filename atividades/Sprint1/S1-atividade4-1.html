@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Insira um numero para tabuada</span> <br>
+    <input type="text" id="inputNum1"> <br>
+
+    <span>Até qual numero a tabuada deve ir</span> <br>
+    <input type="text" id="inputNum2"> <br>
+
+    <button onclick="verTabuada()">Ver Tabuada</button>
+    <div id="msg"></div>
+</body>
+</html>
+<script>
+    function verTabuada(){
+        var num1 = Number(inputNum1.value);
+        var num2 = Number(inputNum2.value);
+        var multiplicacao = 0;
+        for(i = 1; i <= num2; i++){
+            multiplicacao = num1 * i;
+            msg.innerHTML += `${num1} x ${i} = ${multiplicacao} <br>`;
+        }
+
+        
+    }
+</script>

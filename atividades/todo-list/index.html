@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+
+        <section>
+            <form id="taskForm">
+                <input id="taskInput" type="text" placeholder="Digite a descrição da tarefa">
+                <button type="submit">+</button>
+            </form>
+        </section>
+
+        <section>
+            <ul class="taskList"></ul>
+        </section>
+
+        <footer class="taskFooter">
+            <div class="progressContainer">
+                <div class="progressBar"></div>
+            </div>
+            <button>Ocultar concluídos</button>
+        </footer>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

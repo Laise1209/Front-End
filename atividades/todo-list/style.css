@@ -1,0 +1,113 @@
+:root{
+    --primaryColor: #000bff;
+    --bgGrey: #b3b3b3;
+    --bgWhite: #fff;
+    --borderGrey: #ccc;
+    --secundaryColor: #005ec2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bgGrey);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 40%;
+    height: 80%;
+    background-color: #fff;
+    padding: 16px;
+
+    #taskForm{
+        display: flex;
+        gap: 10px;
+        input{
+            flex: 1;
+            border: 1px var(--borderGrey) solid;
+            
+        }
+
+        button{
+            color: var(--bgWhite);
+            padding: 8px 16px;
+            border: none;
+            background-color: var(--primaryColor);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: var(--secundaryColor);
+        }
+    }
+
+    .taskList{
+        list-style: none;
+        
+        .taskItem{
+            margin-top: 16px;
+            padding: 16px;
+            display: flex;
+            border: 1px var(--borderGrey) solid;
+            
+            input{
+                width: 5%;
+            }
+            span{
+                flex: 1;
+                padding: 8px;
+            }
+            button{
+                width: 10%;
+                background-color: var(--bgWhite);
+                border: none;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: var(--secundaryColor);
+            }
+
+        }
+    }
+
+    .taskFooter{
+        padding: 16px;
+        background-color: var(--bgGrey);
+        display: flex;
+        justify-content: space-between;
+
+        button{
+            color: var(--bgWhite);
+            padding: 8px 16px;
+            border: none;
+            background-color: var(--primaryColor);
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: var(--secundaryColor);
+        }
+
+        .progressContainer{
+            width: 50%;
+            background-color: black;
+            border-radius: 25px;
+        }
+
+        .progressBar{
+            background-color: green;
+            width: 100px;
+            height: 100%;
+            border-radius: 25px;
+        }
+    }
+
+}
+

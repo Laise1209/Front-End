@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="gerarNota()">Gerar nota de 3 a 10</button> <br>
+    <div id="msg1"></div>
+    <button onclick="gerarFreq()">Gerar freq de 50 a 100</button> <br>
+    <div id="msg2"></div>
+    <button onclick="verAprov()">Ver aprovacao</button> <br>
+    <div id="msg3"></div>
+    
+</body>
+</html>
+<script>
+    var notas = [];
+    function gerarNota(){
+        var nota = Math.random() * 7 + 3;
+        msg1.innerHTML = `${nota.toFixed(0)}`
+        notas.push(nota.toFixed(0))
+    }
+    var freqs = [];
+    function gerarFreq(){
+        var freq = Math.random() * 50 + 50;
+        msg2.innerHTML = `${freq.toFixed(0)}`
+        freqs.push(freq.toFixed(0))
+    }
+
+    function verAprov(){
+        for(i = 0; i <= notas.length; i++){
+            msg3.innerHTML = `Com a nota ${notas[i]} e frequência ${freqs[i]}`
+            if(notas[i] > 6 && freqs[i] > 75){
+                msg3.innerHTML = `aprovado`
+            } else {
+                msg3.innerHTML = `reprovado`
+
+            }
+            
+        }
+    }
+</script>
