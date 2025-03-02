@@ -27,10 +27,23 @@
         <footer class="taskFooter">
             <div class="progressContainer">
                 <div class="progressBar"></div>
+                <div class="progressText">0/0 concluídos (0.0%)</div>
             </div>
-            <button>Ocultar concluídos</button>
+            <button data-action="hide" id="taskToggleButton">Ocultar concluídas</button>
         </footer>
     </main>
+
+    <input type="text" id="meuCalendario">
+
+<!-- Importando a biblioteca -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+  flatpickr("#meuCalendario", {
+    dateFormat: "d/m/Y",
+  });
+</script>
 
     <script src="./script.js"></script>
 </body>
