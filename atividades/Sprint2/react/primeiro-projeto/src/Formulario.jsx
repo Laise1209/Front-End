@@ -1,14 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export function Formulario() {
+export function Formulario(props) {
 
   const [disable, setDisable] = useState(false)
-  const desabilitarFormulario = () => {
-    setDisable(true);
-  }
+  const[botao, setBotao] = useState("Desabilitar formulario");
+  useEffect(()=>{
+    setDisable(props.desabilitarTodos);
+  },[props.desabilitarTodos]);  
 
-  const habilitarFormulario = () => {
-    setDisable(false);
+  const desabilitarFormulario = () => {
+    if(!disable){
+      setDisable(true);
+      setBotao("Habilitar formulario")
+      
+    }else{
+      setDisable(false);
+      setBotao("Desabilitar formulario")
+    }
   }
 
   return (
@@ -28,8 +36,7 @@ export function Formulario() {
         <input type="text" id="comentario"disabled={disable} />
       </div>
 
-      <button onClick={desabilitarFormulario}>Desabilitar formulario</button> <br />
-      <button onClick={habilitarFormulario}>Habilitar formulario</button> 
+      <button onClick={desabilitarFormulario}>{botao}</button> <br />
     </>
   );
 }
