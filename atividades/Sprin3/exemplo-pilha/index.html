@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Pilha(tamanho) {
+        const vetor = Array.from({ length: tamanho });
+        let topo = -1;
+        let valor;
+
+        function push(elemento) {
+            if (!isFull()) {
+                vetor[++topo] = elemento;
+            } else {
+                console.log("ta cheio")
+
+            }
+        }
+
+        function pop() {
+            if (isEmpty()) {
+                const valor = vetor[topo];
+                vetor[topo] = undefined;
+                topo--;
+            } else {
+                console.log("ta vazio")
+
+            }
+            return valor;
+        }
+
+        function peek() {
+            if (!isEmpty()) {
+                return vetor[topo]
+            } else {
+                console.log("não tem nada")
+            }
+        }
+
+        function isEmpty() {
+            return topo == -1
+        }
+
+        function isFull() {
+            return topo == tamanho - 1;
+        }
+
+        function exibir() {
+            console.log(vetor)
+        }
+
+        function palindromo(palavra) {
+            const minusculas = palavra.toLowerCase();
+            const pilha = Pilha(minusculas.length);
+
+            for (let i = 0; i < minusculas.length; i++) {
+                pilha.push(minusculas[i]);
+            }
+
+            for (let i = 0; i < minusculas.length; i++) {
+                if (minusculas[i] !== pilha.pop()) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        return {
+            isEmpty,
+            isFull,
+            peek,
+            pop,
+            push,
+            exibir,
+            palindromo
+        }
+
+    }
+
+    const pilha = Pilha(10);
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.push("aaa")
+    pilha.exibir();
+    console.log("removing", pilha.pop())
+    console.log("removing", pilha.pop())
+    console.log("Pilha esta cheia", pilha.isFull());
+    console.log("Pilha esta vazia", pilha.isEmpty());
+
+    const palavra = "arara"
+    console.log(`${palavra} é palindromo?`, pilha.palindromo(palavra));
+    
+
+
+</script>

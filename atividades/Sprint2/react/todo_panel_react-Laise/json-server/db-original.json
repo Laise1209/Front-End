@@ -1,0 +1,24 @@
+{
+  "tarefas": [
+  {
+    "id": "1",
+    "descricao": "Estudar React",
+    "concluida": true
+  },
+  {
+    "id": "2",
+    "descricao": "Fazer compras",
+    "concluida": false
+  },
+  {
+    "id": "3",
+    "descricao": "Ler um livro",
+    "concluida": false
+  },
+  {
+    "id": "4",
+    "descricao": "Praticar exercícios",
+    "concluida": true
+  }
+] 
+}

@@ -1,0 +1,173 @@
+/* Reset e variáveis globais */
+:root {
+  --cor-primaria: #007bff;
+  --cor-secundaria: #005ec2;
+  --cor-fundo: #f4f4f4;
+}
+
+h1 {
+  padding: 16px 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cor-fundo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  gap: 10px;
+  display: flex;
+  min-width: 40vw;
+  padding-bottom: 16px;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+label {
+  padding: 8px;
+}
+
+button {
+  background: var(--cor-primaria);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--cor-secundaria);
+}
+
+#lista-tarefas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.item-tarefa {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.task-text{
+  flex: 1;
+}
+
+
+
+.task-checkbox{
+  flex: 0;
+  margin-right: 10px;
+
+}
+
+.edit-btn{
+  margin-right: 10px;
+}
+
+.texto-tarefa {
+  width: 100%;
+}
+
+.botao-editar,
+.botao-excluir {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 15%;
+}
+
+.botao-editar:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.botao-excluir:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.checkbox-tarefa {
+  accent-color: var(--cor-primaria);
+}
+
+.checkbox-tarefa:checked + .texto-tarefa {
+  text-decoration: line-through;
+  color: gray;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Estilização do container da barra de progresso */
+#container-progresso {
+  width: 50%;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Barra de progresso preenchida */
+#barra-progresso {
+  height: 100%;
+  width: 0%; /* Inicia vazia */
+  background: #4caf50; /* Cor verde para tarefas concluídas */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Texto por cima da barra de progresso */
+#texto-progresso {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+/* Botão de alternância */
+#alternar-concluidas {
+  background: var(--cor-primaria);
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#alternar-concluidas:hover {
+  background: var(--cor-secundaria);
+}

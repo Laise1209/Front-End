@@ -1,0 +1,24 @@
+{
+  "tarefas": [
+    {
+      "id": "1745355241252",
+      "descricao": "Estudar React",
+      "concluida": false
+    },
+    {
+      "id": "1745355251730",
+      "descricao": "Fazer Compras",
+      "concluida": false
+    },
+    {
+      "id": "1745355256280",
+      "descricao": "Ler",
+      "concluida": false
+    },
+    {
+      "id": "1745355270325",
+      "descricao": "Passear com o cachorro",
+      "concluida": false
+    }
+  ]
+}

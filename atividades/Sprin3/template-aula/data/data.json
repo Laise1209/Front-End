@@ -1,0 +1,41 @@
+{
+  "usuarios": [
+    {
+      "nome": "Pedro Rocha",
+      "email": "dev@email.com",
+      "senha": "$2b$10$NalPAEj0YvML4BYbSc2swugviMn4bKNu6TfDS3fdKYtKTI84Dz12S",
+      "id": "0b62180e-7435-4cde-b773-80d9285effe6"
+    },
+    {
+      "nome": "Laise",
+      "email": "laise1326@gmail.com",
+      "senha": "$2b$10$J.ij1BPp0xB8rISFJ/SsKuUVrmcfxB1b2fGSzP.0wX1jvfQZDsI/u",
+      "id": "817e3279-a79b-453d-b513-35632bbe32a2"
+    },
+    {
+      "nome": "joealma",
+      "email": "phmartinalmeida@gmail.com",
+      "senha": "$2b$10$Y5wrul2CrrwKZH1Ta3Kdb.yfN/KVy5emsaxdh00cRKX7Mo4TXMBQy",
+      "id": "44e97937-598a-4ecb-8f6e-efcea239ad94"
+    },
+    {
+      "nome": "carlao",
+      "email": "laise.almeida@sptech.school",
+      "senha": "$2b$10$94MaXN4A/jB1k1CdgnK9NevAwy7x7MnSI3dc2.351SoC9FgPPgiRu",
+      "id": "ba6b0206-0dc6-4bd9-b332-54e810f43f53"
+    },
+    {
+      "nome": "pedro",
+      "email": "pedro@email.com",
+      "senha": "$2b$10$iuEBlk6jEtiIBUTOJvXLVOSv6MIJjNdMUBXKwsgX2aVG3JB1MttGy",
+      "id": "2e7fd3f6-b72c-4ffa-8964-cfccbee0318b"
+    },
+    {
+      "nome": "antonio",
+      "email": "aaaaa@gmail.com",
+      "senha": "$2b$10$GXFcyZ0geSkhlLfB/Ts54uqcl1RwgFwglMO8Rt/eNx4MmVIHenv7i",
+      "id": "1c84441d-55a6-4e51-bba1-0f5ae8d0e3d5"
+    }
+  ],
+  "postagens": []
+}
